@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - run: npm ci && npm install gh-pages
     - run: npm run build
     - run: touch ./out/.nojekyll
     - run: gh-pages -d out -t true

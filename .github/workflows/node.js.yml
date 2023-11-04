@@ -30,6 +30,8 @@ jobs:
         cache: 'npm'
     - run: npm ci && npm install -g gh-pages --save-dev
     - run: npm run static
+    - run: git config --global user.email "149870435+marco-openspace@users.noreply.github.com"
+    - run: git config --global user.name "Marco Openspace"
     - run: gh-pages -d out -t true
 
     - name: Deploy 🚀

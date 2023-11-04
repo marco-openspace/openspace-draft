@@ -30,6 +30,7 @@ jobs:
         cache: 'npm'
     - run: npm ci && npm install -g gh-pages --save-dev
     - run: npm run static
+    - run: gh-pages -d out -t true
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4

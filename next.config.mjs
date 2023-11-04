@@ -13,6 +13,11 @@ export default bundleAnalyzer({
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  output: 'export',
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:
     // Module not found: Can't resolve 'bufferutil'

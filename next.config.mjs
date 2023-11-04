@@ -18,8 +18,8 @@ export default bundleAnalyzer({
     loader: 'akamai',
     path: '',
   },
-  basePath: '/',
-  assetPrefix: '/',
+  basePath: '/nextjs-pages',
+  assetPrefix: '/nextjs-pages',
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:
     // Module not found: Can't resolve 'bufferutil'

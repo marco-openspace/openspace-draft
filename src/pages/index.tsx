@@ -32,7 +32,7 @@ const Index = () => (
         {' '}
         <Image
           className="mx-auto flex space-x-4 rounded-full border-white bg-[#7289da] p-3"
-          src="/assets/images/discord-logo.svg"
+          src="/nextjs-pages/assets/images/discord-logo.svg"
           alt="Discord Logo"
           width={60}
           height={60}

@@ -6,6 +6,8 @@ const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 export default bundleAnalyzer({
   eslint: {
@@ -18,8 +20,10 @@ export default bundleAnalyzer({
     loader: 'akamai',
     path: '',
   },
+  assetPrefix: isProd
+    ? 'https://marco-openspace.github.io/openspace-draft/nextjs-pages/'
+    : undefined,
   basePath: '/nextjs-pages',
-  assetPrefix: '/nextjs-pages',
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:
     // Module not found: Can't resolve 'bufferutil'
